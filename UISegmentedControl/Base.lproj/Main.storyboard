@@ -71,17 +71,36 @@
                                             <action selector="changeDate:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ugi-57-Nwj"/>
                                         </connections>
                                     </datePicker>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pOX-jd-sTa">
+                                        <rect key="frame" x="260" y="731" width="51" height="31"/>
+                                        <color key="onTintColor" systemColor="systemRedColor"/>
+                                        <color key="thumbTintColor" systemColor="linkColor"/>
+                                        <connections>
+                                            <action selector="switchAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Zyq-DV-s79"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LaZ-4A-e3e">
+                                        <rect key="frame" x="20" y="731" width="232" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="LaZ-4A-e3e" secondAttribute="bottom" constant="32" id="4ua-Bb-2UO"/>
                                     <constraint firstItem="FRJ-RD-GBj" firstAttribute="top" secondItem="ffw-MD-lNF" secondAttribute="bottom" constant="84" id="5z8-eD-Ymd"/>
                                     <constraint firstItem="bmK-Nj-5WK" firstAttribute="leading" secondItem="Qyn-19-HEl" secondAttribute="leading" constant="20" id="7XU-KT-EVg"/>
+                                    <constraint firstItem="pOX-jd-sTa" firstAttribute="leading" secondItem="LaZ-4A-e3e" secondAttribute="trailing" constant="8" symbolic="YES" id="9cf-Bb-J5q"/>
                                     <constraint firstItem="ffw-MD-lNF" firstAttribute="top" secondItem="bmK-Nj-5WK" secondAttribute="bottom" constant="29" id="DhQ-Fe-CoA"/>
+                                    <constraint firstItem="LaZ-4A-e3e" firstAttribute="top" secondItem="O23-p5-G1z" secondAttribute="bottom" constant="78" id="M5L-HZ-hAy"/>
+                                    <constraint firstItem="LaZ-4A-e3e" firstAttribute="leading" secondItem="Zs2-R8-KOe" secondAttribute="leading" constant="20" symbolic="YES" id="S9A-nN-pmR"/>
                                     <constraint firstItem="bmK-Nj-5WK" firstAttribute="top" secondItem="yfs-y0-Xpu" secondAttribute="bottom" constant="51" id="VLy-o1-ghK"/>
                                     <constraint firstItem="FRJ-RD-GBj" firstAttribute="trailing" secondItem="ssS-70-jMr" secondAttribute="trailing" id="XJF-JO-spX"/>
                                     <constraint firstItem="yfs-y0-Xpu" firstAttribute="top" secondItem="Qyn-19-HEl" secondAttribute="top" constant="20" id="YnK-51-Tnj"/>
                                     <constraint firstItem="O23-p5-G1z" firstAttribute="leading" secondItem="Zs2-R8-KOe" secondAttribute="leading" constant="-8" id="c76-bR-qmS"/>
                                     <constraint firstItem="bmK-Nj-5WK" firstAttribute="centerX" secondItem="ffw-MD-lNF" secondAttribute="centerX" id="f38-JE-Ncd"/>
                                     <constraint firstItem="ffw-MD-lNF" firstAttribute="leading" secondItem="FRJ-RD-GBj" secondAttribute="leading" id="kP8-fe-TnE"/>
+                                    <constraint firstAttribute="bottom" secondItem="pOX-jd-sTa" secondAttribute="bottom" constant="32" id="kch-I1-fqc"/>
                                     <constraint firstItem="yfs-y0-Xpu" firstAttribute="leading" secondItem="Qyn-19-HEl" secondAttribute="leading" constant="39" id="lgo-vK-kf6"/>
                                     <constraint firstItem="yfs-y0-Xpu" firstAttribute="leading" secondItem="ffw-MD-lNF" secondAttribute="leading" id="pmq-uM-reb"/>
                                     <constraint firstItem="yfs-y0-Xpu" firstAttribute="trailing" secondItem="ffw-MD-lNF" secondAttribute="trailing" id="qFN-Mo-E2M"/>
@@ -89,8 +108,10 @@
                                     <constraint firstAttribute="trailing" secondItem="O23-p5-G1z" secondAttribute="trailing" constant="8" id="rgB-oO-P9w"/>
                                     <constraint firstItem="ssS-70-jMr" firstAttribute="top" secondItem="FRJ-RD-GBj" secondAttribute="bottom" constant="62" id="rrn-g3-KSL"/>
                                     <constraint firstItem="FRJ-RD-GBj" firstAttribute="leading" secondItem="ssS-70-jMr" secondAttribute="leading" id="u6X-D4-vVw"/>
+                                    <constraint firstItem="pOX-jd-sTa" firstAttribute="top" secondItem="O23-p5-G1z" secondAttribute="bottom" constant="78" id="uPx-sb-uLH"/>
                                     <constraint firstItem="ffw-MD-lNF" firstAttribute="trailing" secondItem="FRJ-RD-GBj" secondAttribute="trailing" id="xIj-oR-WmC"/>
                                     <constraint firstAttribute="trailing" secondItem="bmK-Nj-5WK" secondAttribute="trailing" constant="20" id="xfc-WC-Xam"/>
+                                    <constraint firstAttribute="trailing" secondItem="pOX-jd-sTa" secondAttribute="trailing" constant="29" id="y3V-QW-bOa"/>
                                     <constraint firstItem="yfs-y0-Xpu" firstAttribute="centerX" secondItem="Zs2-R8-KOe" secondAttribute="centerX" id="yEP-KB-hG9"/>
                                     <constraint firstItem="O23-p5-G1z" firstAttribute="top" secondItem="ssS-70-jMr" secondAttribute="bottom" constant="99" id="zz7-24-qYR"/>
                                 </constraints>
@@ -110,9 +131,11 @@
                     <size key="freeformSize" width="414" height="900"/>
                     <connections>
                         <outlet property="datePicker" destination="O23-p5-G1z" id="SRr-i6-JUy"/>
+                        <outlet property="doneButton" destination="ssS-70-jMr" id="Nwg-r7-Qmd"/>
                         <outlet property="label" destination="bmK-Nj-5WK" id="mBQ-wH-SmU"/>
                         <outlet property="segmentedControl" destination="yfs-y0-Xpu" id="gnU-s5-TCA"/>
                         <outlet property="slider" destination="ffw-MD-lNF" id="C7T-ol-FBJ"/>
+                        <outlet property="switchLabel" destination="LaZ-4A-e3e" id="wK9-L2-Y3p"/>
                         <outlet property="textField" destination="FRJ-RD-GBj" id="Oki-JV-SHH"/>
                     </connections>
                 </viewController>
@@ -124,6 +147,9 @@
     <resources>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
